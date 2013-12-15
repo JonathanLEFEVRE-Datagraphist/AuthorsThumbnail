@@ -1,0 +1,32 @@
+=== Plugin Name ===
+
+This plugins makes it easier to display a thumbnail associated with the author of the post, just upload an image through your user's profile. 
+
+
+METHODOLOGY:
+
+As theme's structures differ from one to another, we can't establish a definitive way to ensure the avatar appearance as each theme has its way to
+ensure the loading of the loop. That's why there is two different implementation method, but before, you have to upload your own picture.
+
+1- Go to your user's profile and upload your personnal picture, make it 70*70px for more convenience.
+
+2- Implementation 
+
+	2.1 Automic display of author's custom avatar 
+	Add the following code to your theme loop (content.php for twenty-thirteen). 
+	
+	<?php echo get_avatar( get_the_author_meta( 'ID' ), 70 ); ?>  
+
+	2.2 Via a shortcode
+	copy-paste the following shortcode in your posts & pages. 
+	
+	[my_avatar] 
+
+
+____________________________________________________________
+Sources:
+For the upload extra-field & gravatar overide function:
+http://www.billerickson.net/wordpress-custom-avatar/
+
+For the shortcode:
+http://ithemes.com/codex/page/Add_the_Post_Author_Avatar
